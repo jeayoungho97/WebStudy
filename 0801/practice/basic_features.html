@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .box {
+            background-color: lightgray;
+            height: 200px;
+            width: 1000px;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <!-- 텍스트 정렬 -->
+        <p class="text-start">왼쪽 정렬</p>
+        <p class="text-center">가운데 정렬</p>
+        <p class="text-end">오른쪽 정렬</p>
+    </div>
+
+    <div class="box">
+        <!-- 텍스트 정렬 -->
+        <p class="w-25 bg-primary">너비 25%</p>
+        <p class="w-50 bg-primary">너비 50%</p>
+        <p class="w-75 bg-primary">너비 75%</p>
+        <p class="w-100 bg-primary">너비 100%</p>
+    </div>
+
+    <div class="box">
+        <!-- 텍스트 정렬 -->
+        <p class="p-3 bg-primary">패딩</p>
+        <p class="px-4 bg-primary">좌우 패딩</p>
+        <p class="mt-5 bg-primary">마진</p>
+    </div>
+
+    <div class="box">
+        <div class="d-flex justify-content-evenly">
+            <div>left</div>
+            <div>center</div>
+            <div>right</div>
+        </div>
+
+        <div class="d-flex flex-column">
+            <div>up</div>
+            <div>down</div>
+        </div>
+    </div>
+
+    <div class="box position-relative">
+        <p class="position-absolute bottom-0 end-0">우하단</p>
+        <p class="position-absolute top-0 start-0">좌상단</p>
+    </div>
+</body>
+
+</html>

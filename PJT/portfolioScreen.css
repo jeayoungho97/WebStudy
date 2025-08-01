@@ -1,0 +1,303 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+.container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  scroll-behavior: smooth;
+}
+
+.tablet {
+  width: 1040px;
+  height: 640px;
+  background: gray;
+  padding: 20px;
+  border-radius: 10px;
+  /* margin: 100px auto; 위쪽 여백 */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* 테두리 밖은 보이지 않게 */
+}
+
+/* 화면 안에서 스크롤이 아니라, 전체 문서 스크롤 */
+.screen-content {
+  flex: 1;
+  overflow: visible; /* 내부 스크롤 제거 */
+}
+
+.pages {
+  height: 540px; /* 프레임과 같은 높이 */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: black;
+}
+
+
+/* 상단 고정 바 */
+.navbar {
+    width: 1000px;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgb(240, 238, 238);
+    z-index: 3;
+}
+
+/* 좌측 이름 */
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* 우측 메뉴 */
+.navbar-collapse {
+    max-width: 350px;
+}
+
+
+
+
+
+
+
+/* 페이지 컨텐츠 */
+.page-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 540px;
+}
+
+/* 메인 페이지 */
+#main-page {
+    align-items: flex-end;
+}
+
+.carousel-item img {
+    max-height: 540px;
+    width: 100%;
+    object-fit: contain;
+}
+
+#carouselExampleAutoplaying {
+    width: 100%;
+}
+
+/* About 페이지 */
+.about-page {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* 카드 */
+.card {
+    width: 20rem;
+    height: 530px;
+    background-color: black;
+    /* border: 1px solid rgb(255, 255, 255); */
+    margin-left: 10px;
+    color: #ffffff !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    margin-top: 20px;
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    /* border: 1px solid lightslategray; */
+    border-radius: 50%;
+}
+
+.card-body {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 연락처 */
+.phone-book>.card {
+    height: 530px;
+    width: 39rem;
+    background-color: black;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.phone-book ul {
+    padding-left: 25px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.list-group-item {
+    width: 550px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.list-group-item>img {
+    margin-top: 0;
+    width: 120px;
+    aspect-ratio: 1 / 1;
+    /* border: 2px solid lightslategray; */
+}
+
+.list-group-item>.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 10px;
+}
+
+/* 스킬 페이지 스타일 */
+/* 스킬 페이지 중앙 정렬 */
+#skill-page {
+    justify-content: center;
+    align-items: center;
+}
+
+#skill-page .page-content {
+    flex-direction: column;
+    /* 세로로 아이템 배치 */
+    justify-content: center;
+    /* 세로 중앙 */
+    align-items: center;
+    /* 가로 중앙 */
+    background-color: black;
+    gap: 20px;
+    padding: 20px;
+}
+
+#skill-page .skill-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 90%;
+}
+
+#skill-page .progress {
+    width: 80%;
+    height: 30px;
+}
+
+#skill-page .skill-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+
+/* 스택 페이지 */
+.stack-page {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+/* table 기본 스타일 */
+.stack-table {
+    border-collapse: collapse;
+    width: 80%;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+
+.stack-table th,
+.stack-table td {
+    border: 1px solid #00bcd4;
+    padding: 12px;
+}
+
+.stack-table th {
+    background-color: #00bcd4;
+    color: #000;
+    font-weight: bold;
+}
+
+.stack-table tr:nth-child(even) {
+    background-color: #222;
+}
+
+.stack-table tr:nth-child(odd) {
+    background-color: #333;
+}
+
+
+/* Closing page 중앙 정렬 */
+.closing-page {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+/* Closing card 스타일 */
+.closing-card {
+    background-color: #222;
+    border: 2px solid #00bcd4;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    width: 60%;
+    max-width: 500px;
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.4);
+}
+
+.closing-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.closing-card h2 {
+    color: #00bcd4;
+    margin-bottom: 15px;
+}
+
+.closing-card p {
+    line-height: 1.5;
+    font-size: 18px;
+}
