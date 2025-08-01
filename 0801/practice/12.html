@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: rgb(236, 236, 236);
+            height: 150px;
+            display: flex;
+
+        }
+
+        .box {
+            color: white;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(140, 154, 254);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 5px;
+        }
+
+        .small-box{
+            height: 40px;
+        }
+
+        .row-start-center{
+            align-items: center;
+            padding-left: 5px;
+        }
+
+        .column-end-center{
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-evenly;
+        }
+
+        .row-center-around{
+            justify-content: space-around;
+            padding-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <div>1.</div>
+        <!-- 플랙스 컨테이너 -->
+        <div class="container row-start-center">
+            <div class="box">A</div>
+            <div class="box">B</div>
+            <div class="box">C</div>
+        </div>
+
+        <div>2.</div>
+        <!-- 플랙스 컨테이너 -->
+        <div class="container column-end-center">
+            <div class="box small-box">A</div>
+            <div class="box small-box">B</div>
+            <div class="box small-box">C</div>
+        </div>
+
+        <div>3.</div>
+        <!-- 플랙스 컨테이너 -->
+        <div class="container row-center-around">
+            <div class="box">A</div>
+            <div class="box">B</div>
+            <div class="box">C</div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
